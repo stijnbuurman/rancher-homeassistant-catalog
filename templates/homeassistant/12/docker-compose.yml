@@ -22,6 +22,7 @@ services:
       - /var/lib/docker/volumes/ha_config:/config
     ports:
       - ${HA_PORT}:8123
+    {{- if (.Values.DEV_ZWAVE || .Values.DEV_RFXCOM) }}
     devices:
       {{- if (.Values.DEV_ZWAVE) }}
       - /dev/serial/by-id/${DEV_ZWAVE}:/zwaveusb:rwm
@@ -29,6 +30,7 @@ services:
       {{- if (.Values.DEV_RFXCOM) }}
       - /dev/serial/by-id/${DEV_RFXCOM}:/rfxtrxusb:rwm
       {{- end }}
+    {{- end }}
     restart: always
     environment:
       MYSQL_DATABASE: ${MYSQL_DATABASE}
