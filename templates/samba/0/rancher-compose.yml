@@ -1,0 +1,20 @@
+version: '2'
+
+.catalog:
+  name: Samba
+  description: |
+    This samba mounts your home assistant config so you can edit it from a remote
+  version: 1.0.0
+  questions:
+   - variable: 'USERNAME'
+     description: 'Enter a username for samba'
+     label: 'Username'
+     required: true
+     type: 'string'
+     default: default
+   - variable: 'PASSWORD'
+     description: 'Enter a password for samba'
+     label: 'Password'
+     required: true
+     type: 'password'
+     default: default

@@ -17,11 +17,14 @@ services:
   homeassistant:
     depends_on:
       - db
-    image: homeassistant/home-assistant:0.63.3
+    image: homeassistant/home-assistant:0.64.1
     volumes:
       - /var/lib/docker/volumes/ha_config:/config
     ports:
       - ${HA_PORT}:8123
+      - 137:137
+      - 138:138
+      - 139:139
     {{- if (.Values.DEV_ZWAVE.Values.DEV_RFXCOM) }}
     devices:
       {{- if (.Values.DEV_ZWAVE) }}
