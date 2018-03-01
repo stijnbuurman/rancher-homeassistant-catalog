@@ -4,7 +4,7 @@ version: '2'
   name: Samba
   description: |
     This samba mounts your home assistant config so you can edit it from a remote
-  version: 1.0.0
+  version: 1.0.1
   questions:
    - variable: 'USERNAME'
      description: 'Enter a username for samba'

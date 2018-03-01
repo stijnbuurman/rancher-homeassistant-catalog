@@ -1,5 +1,5 @@
 name: Samba
 description: |
   Samba automatically makes your home assistant config available as a samba share
-version: 1.0.0
+version: 1.0.1
 category: Automation
