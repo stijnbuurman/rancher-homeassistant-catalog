@@ -18,3 +18,15 @@ version: '2'
      required: true
      type: 'password'
      default: default
+   - variable: 'SHARENAME'
+     description: 'Enter the name of the samba share'
+     label: 'Share name'
+     required: true
+     type: 'string'
+     default: haconfig
+   - variable: 'FOLDER'
+     description: 'Enter the host folder path'
+     label: 'Folder path'
+     required: true
+     type: 'string'
+     default: /var/lib/docker/volumes/ha_config

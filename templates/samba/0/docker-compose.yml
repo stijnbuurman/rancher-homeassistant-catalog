@@ -10,8 +10,8 @@ services:
       - "139:139"
       - "445:445"
     volumes:
-      - /var/lib/docker/volumes/ha_config:/config
+      - ${HOST_FOLDER}:/samba_folder
     environment:
       TZ: CET
       WORKGROUP: WORKGROUP
-    command: -u "${USERNAME};${PASSWORD}" -s "Config;/config;yes;no;no;${USERNAME};${USERNAME}" -n -p
+    command: -u "${USERNAME};${PASSWORD}" -s "${SHARENAME};/samba_folder;yes;no;no;${USERNAME};${USERNAME}" -n -p
