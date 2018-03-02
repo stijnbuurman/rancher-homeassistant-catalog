@@ -11,7 +11,10 @@ services:
       - "445:445"
     volumes:
       - ${HOST_FOLDER}:/samba_folder
+    {{- if (.Values.SHARENAME2) }}
+      - ${HOST_FOLDER2}:/samba_folder2
+    {{- end }}
     environment:
       TZ: CET
       WORKGROUP: WORKGROUP
-    command: -u "${USERNAME};${PASSWORD}" -s "${SHARENAME};/samba_folder;yes;no;no;${USERNAME};${USERNAME}" -n -p
+    command: -u "${USERNAME};${PASSWORD}" -s "${SHARENAME};/samba_folder;yes;no;no;${USERNAME};${USERNAME}" {{- if (.Values.SHARENAME2) }} -s "${SHARENAME2};/samba_folder2;yes;no;no;${USERNAME};${USERNAME}" {{- end }} -n -p

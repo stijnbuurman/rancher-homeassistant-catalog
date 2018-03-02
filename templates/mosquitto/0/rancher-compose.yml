@@ -4,7 +4,7 @@ version: '2'
   name: Mosquitto
   description: |
     Eclipse Mosquitto is an open source message broker which implements MQTT.
-  version: 1.4.13
+  version: 1.4.14
   questions:
    - variable: 'MQTT_PORT'
      description: 'Leave empty for not exposing plain MQTT'

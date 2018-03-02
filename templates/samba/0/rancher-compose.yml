@@ -30,3 +30,15 @@ version: '2'
      required: true
      type: 'string'
      default: /var/lib/docker/volumes/ha_config
+   - variable: 'SHARENAME2'
+     description: 'Enter the name of the second samba share (leave empty to skip)'
+     label: 'Share name 2'
+     required: false
+     type: 'string'
+     default: mosquitto
+   - variable: 'HOST_FOLDER2'
+     description: 'Enter the second host folder path'
+     label: 'Folder path 2'
+     required: false
+     type: 'string'
+     default: /var/lib/docker/volumes/mosquitto

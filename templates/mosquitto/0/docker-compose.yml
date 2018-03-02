@@ -3,9 +3,9 @@ services:
   mosquitto:
     image: ncarlier/mqtt
     volumes:
-      - /var/lib/docker/volumes/mosquitto/config:/mosquitto/config
-      - /var/lib/docker/volumes/mosquitto/data:/mosquitto/data
-      - /var/lib/docker/volumes/mosquitto/log:/mosquitto/log
+      - /var/lib/docker/volumes/mosquitto/config:/etc/mosquitto
+      - /var/lib/docker/volumes/mosquitto/data:/var/lib/mosquitto
+      - /var/lib/docker/volumes/mosquitto/log:/var/log/mosquitto
     ports:
     {{- if (.Values.MQTT_PORT) }}
       - ${MQTT_PORT}:1883
