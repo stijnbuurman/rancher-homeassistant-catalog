@@ -3,7 +3,7 @@ services:
   caddy:
     image: abiosoft/caddy:0.10.11
     volumes:
-      - /var/lib/docker/volumes/caddy_proxy/config/Caddyfile:/etc/Caddyfile
+      - /var/lib/docker/volumes/caddy_proxy/etc:/etc
       - /var/lib/docker/volumes/caddy_proxy/srv:/srv
       - /var/lib/docker/volumes/caddy_proxy/.caddy:/root/.caddy
     ports:
