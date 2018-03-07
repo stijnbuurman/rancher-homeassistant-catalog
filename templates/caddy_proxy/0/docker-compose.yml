@@ -13,4 +13,4 @@ services:
     {{- if (.Values.CADDY_HTTPS_PORT) }}
       - ${CADDY_HTTPS_PORT}:443
     {{- end }}
-    restart: always
+      - 2015:2015
