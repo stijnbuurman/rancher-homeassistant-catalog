@@ -4,7 +4,7 @@ version: '2'
   name: Caddy proxy
   description: |
     Using Caddy as a proxy for Home Assistant allows you to serve Home Assistant securely over standard ports.
-  version: 0.10.10
+  version: 0.10.11
   questions:
    - variable: 'CADDY_HTTP_PORT'
      description: 'Leave empty for not exposing HTTP'
