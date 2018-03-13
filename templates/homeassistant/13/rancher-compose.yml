@@ -5,7 +5,7 @@ version: '2'
   description: |
     Track and control all devices at home and automate control.
   version: 0.64.3
-  upgrade_from: >=0.64.0
+  upgrade_from: >=0.63.0
   questions:
    - variable: 'HA_PORT'
      description: 'Home Assistant Port'
