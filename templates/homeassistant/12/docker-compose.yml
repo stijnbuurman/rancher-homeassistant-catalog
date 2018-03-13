@@ -22,9 +22,6 @@ services:
       - /var/lib/docker/volumes/ha_config:/config
     ports:
       - ${HA_PORT}:8123
-      - 137:137
-      - 138:138
-      - 139:139
     {{- if (.Values.DEV_ZWAVE.Values.DEV_RFXCOM) }}
     devices:
       {{- if (.Values.DEV_ZWAVE) }}
